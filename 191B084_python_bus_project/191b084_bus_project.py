@@ -1,8 +1,10 @@
+# header files
 from tkinter import *
 import sqlite3 
 from PIL import Image,ImageTk
 from tkinter import messagebox
 
+# creating database
 conn = sqlite3.connect("Bus_information_database.db")
 
 c = conn.cursor()
@@ -29,9 +31,12 @@ conn.close()
 
 globl_list = []
 
+# main fucntion
+
 def bus_main_screen():
 
-
+    # function for searching the the bus in the database
+    
     def search_bus():
 
         def search(bus_type_selection,frm,destination,date):
@@ -310,6 +315,8 @@ def bus_main_screen():
 
 
 
+    # function to add the new bus details
+    
     def add_bus():
 
         root.destroy()
@@ -490,6 +497,8 @@ def bus_main_screen():
     root.mainloop()
 
 
+
+# creating the user interface
 
 root_details = Tk()
 #root_details.geometry('500x500')
